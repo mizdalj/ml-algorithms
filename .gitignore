@@ -1,0 +1,43 @@
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# Virtual environment
+venv/
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# Datasets (You might want to ignore large datasets)
+# *.csv
+# *.tsv
+# *.xlsx
+
+# IDEs
+# PyCharm
+.idea/
+
+# VSCode
+.vscode/
+
+# Atom
+.atom/
+
+# Eclipse
+*.pydevproject
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Linux
+*.swp
+*~
+
