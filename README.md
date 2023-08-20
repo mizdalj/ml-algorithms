@@ -3,7 +3,7 @@
 This project is an attempt to implement various machine learning algorithms from scratch in Python. This provides a deeper understanding of the intricacies of each algorithm, apart from relying on pre-built libraries.
 
 ## Algorithms Implemented:
-- [ ] Linear Regression
+- ✅ Linear Regression
 - [ ] Logistic Regression
 - [ ] Decision Trees
 - [ ] Neural Networks
