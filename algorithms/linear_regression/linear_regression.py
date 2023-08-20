@@ -28,13 +28,13 @@ def linear_regression_analysis(data_file, implementation='scikit-learn'):
     # 2. Model Creation and Training
 
     if implementation == 'scikit-learn':
-        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.5, random_state=42)
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
         model = SKLinearRegression()
         model.fit(X_train, y_train)
         y_pred = model.predict(X_test)
         mse = SKMeanSquaredError(y_test, y_pred)
     else:
-        X_train, X_test, y_train, y_test = my_train_test_split(X, y, test_size=0.5, random_seed=42)
+        X_train, X_test, y_train, y_test = my_train_test_split(X, y, test_size=0.2, random_seed=42)
         m, c = simple_linear_regression(X_train["Time"].values, y_train.values)
         y_pred = predict(X_test["Time"].values, m, c)
         mse = mean_squared_error(y_test.values, y_pred)
