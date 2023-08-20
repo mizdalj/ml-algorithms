@@ -4,13 +4,13 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression as SKLinearRegression
 from sklearn.metrics import mean_squared_error as SKMeanSquaredError
 
-from algorithms.linear_regression.my_linear_regression import simple_linear_regression, predict, mean_squared_error, \
-    my_train_test_split
+from algorithms.linear_regression.my_linear_regression import simple_linear_regression, predict, mean_squared_error
+from algorithms.utils import my_train_test_split
 
 
 def linear_regression_analysis(data_file, implementation='scikit-learn'):
     # 1. Data Preparation
-    data = pd.read_csv(data_file)
+    data = pd.read_csv(data_file, low_memory=False)
     filtered_data = data[(data["LocTypeName"] == "Country/Area") & (data["Time"] < 2022)]
 
     # User's choice of country

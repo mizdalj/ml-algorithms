@@ -13,7 +13,12 @@ def main_menu():
 
 
 def logistic_regression_menu():
-    lor.spam_classification("./datasets/spam_or_not_spam.csv")
+    print("\nLogistic Regression for Spam Classification")
+    implementation_choice = input("Which implementation would you like to use? (scikit-learn/custom): ").lower()
+    if implementation_choice in ['scikit-learn', 'custom']:
+        lor.spam_classification("./datasets/spam_or_not_spam.csv", implementation_choice)
+    else:
+        print("Invalid choice. Going back to main menu.")
 
 
 def linear_regression_menu():

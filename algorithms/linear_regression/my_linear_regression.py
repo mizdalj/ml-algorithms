@@ -1,28 +1,6 @@
 import numpy as np
 
 
-# Custom Linear Regression Functions
-def my_train_test_split(X, y, test_size=0.5, random_seed=None):
-    # Set the random seed for reproducibility
-    np.random.seed(random_seed)
-
-    # Generate shuffled indices
-    shuffled_indices = np.random.permutation(len(X))
-
-    # Calculate the test set size
-    test_set_size = int(len(X) * test_size)
-
-    # Split the indices for the train and test set
-    test_indices = shuffled_indices[:test_set_size]
-    train_indices = shuffled_indices[test_set_size:]
-
-    # Use indices to get train and test subsets
-    X_train, X_test = X.iloc[train_indices], X.iloc[test_indices]
-    y_train, y_test = y.iloc[train_indices], y.iloc[test_indices]
-
-    return X_train, X_test, y_train, y_test
-
-
 def simple_linear_regression(X, y):
     n = len(X)
 
